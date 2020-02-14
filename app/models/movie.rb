@@ -11,4 +11,9 @@ class Movie < ApplicationRecord
   def order_age
     Actor.select(:name).order(age: :desc)
   end
+
+  def self.search(search)
+      actor = Actor.find_by(name: search)
+      self.where(actor_id: actor)
+  end
 end
