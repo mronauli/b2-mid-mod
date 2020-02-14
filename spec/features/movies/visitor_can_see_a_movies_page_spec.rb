@@ -9,7 +9,7 @@ RSpec.describe 'on an actors show page' do
         movie_2 = Movie.create(name: "Scary Movie", year_created: 2000, genre: "horror", studio: studio_2)
         movie_3 = Movie.create(name: "Funny Movie", year_created: 2000, genre: "comedy", studio: studio_2)
         actor_1 = Actor.create(name: "Billy Bob", age: 40, movies:[movie_1, movie_2])
-        actor_2 = Actor.create(name: "Queen Latifah", age: 50, movies:[movie_3])
+        actor_2 = Actor.create(name: "Queen Latifah", age: 50, movies:[movie_1])
         actor_3 = Actor.create(name: "Seth Rogan", age: 60, movies:[movie_1])
 
 
@@ -22,7 +22,7 @@ RSpec.describe 'on an actors show page' do
         expect(page).to have_content(actor_2.name)
         expect(page).to have_content("50")
       end
-      
+
     end
   end
   # Story 4

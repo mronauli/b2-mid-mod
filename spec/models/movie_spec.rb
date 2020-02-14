@@ -15,7 +15,7 @@ RSpec.describe Movie, type: :model do
 
   describe "average_age" do
   it "can count average age of actors in movie" do
-    movie_1 = Movie.create(name: "Big Dogs", year_created: 1997, genre: "comedy", studio: studio_1)
+    movie_1 = Movie.create(name: "Big Dogs", year_created: 1997, genre: "comedy")
     actor_1 = Actor.create(name: "Billy Bob", age: 40, movies:[movie_1])
     actor_2 = Actor.create(name: "Queen Latifah", age: 60, movies:[movie_1])
     expect(movie_1.average_age).to eq(50)
