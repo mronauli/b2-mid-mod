@@ -17,7 +17,15 @@ RSpec.describe 'on an actors show page' do
         expect(page).to have_content(movie_1.name)
         expect(page).to have_content(movie_1.year_created)
         expect(page).to have_content(movie_1.genre)
+        expect(page).to have_content(actor_1.name)
+        expect(page).to have_content(actor_2.name)
         expect(page).to have_content(50)
       end
     end
   end
+# Story 3
+# As a user,
+# When I visit a movie's show page.
+# I see the movie's name, creation year, and genre,
+# and a list of all its actors from youngest to oldest.
+# And I see the average age of all of the movie's actors
