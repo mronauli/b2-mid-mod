@@ -7,4 +7,8 @@ class Movie < ApplicationRecord
   def average_age
     Actor.average(:age).present? ? Actor.average(:age) : 0
   end
+
+  def order_age
+    Age.order(age: :desc)
+  end
 end
