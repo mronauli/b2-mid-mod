@@ -22,10 +22,3 @@ RSpec.describe 'on a studio index page' do
       end
     end
   end
-# Story 1
-# As a user,
-# When I visit the studio index page
-# I see a list of all of the movie studios
-# And underneath each studio, I see the names of all of its movies.
-# Story 2
-# As a user,
