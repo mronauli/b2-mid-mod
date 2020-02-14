@@ -3,4 +3,8 @@ class Movie < ApplicationRecord
   belongs_to :studio
   has_many :actor_movies
   has_many :actors, through: :actor_movies
+
+  def average_age
+    Actor.average(:age).present? ? Actor.average(:age) : 0
+  end
 end

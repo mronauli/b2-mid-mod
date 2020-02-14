@@ -1,4 +1,4 @@
-equire 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe 'on an actors show page' do
     describe "as a visitor" do
@@ -13,13 +13,14 @@ RSpec.describe 'on an actors show page' do
         actor_3 = Actor.create(name: "Seth Rogan", age: 60, movies:[movie_1])
 
 
-        "/movies/#{movie_1.id}"
+        visit "/movies/#{movie_1.id}"
+
         expect(page).to have_content(movie_1.name)
         expect(page).to have_content(movie_1.year_created)
         expect(page).to have_content(movie_1.genre)
         expect(page).to have_content(actor_1.name)
         expect(page).to have_content(actor_2.name)
-        expect(page).to have_content(50)
+        expect(page).to have_content("50")
       end
     end
   end
