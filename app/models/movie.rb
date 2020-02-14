@@ -9,6 +9,6 @@ class Movie < ApplicationRecord
   end
 
   def order_age
-    Actor.order(age: :desc)
+    Actor.select(:name).order(age: :desc)
   end
 end
