@@ -18,14 +18,8 @@ RSpec.describe 'on a studio index page' do
         expect(page).to have_content(movie_1.name)
         expect(page).to have_content(movie_2.name)
 
-        expect(page).to_not have_content(actor_1.name)
+        expect(page).to_not have_content(actor_2.name)
         expect(page).to_not have_content(movie_3.name)
       end
     end
   end
-
-
-# Story 2
-# As a user,
-# When I visit an actor's show page,
-# I see their name, their age, and a list of the names of all of the movies they are in.
