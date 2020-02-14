@@ -1,0 +1,8 @@
+<% @studios.each do |studio| %>
+  <div class="grid-container" id= 'studio-<%=studio.id%>'>
+    <%= studio.name %>
+    <%= studio.movies.each do |movie| %>
+      <%= movie.name %>
+    <% end %>
+  </div>
+  <% end %>
